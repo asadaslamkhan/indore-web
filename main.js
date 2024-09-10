@@ -125,6 +125,7 @@ sr.reveal(`.review__leaf, .footer__floral`, { delay: 1000, origin: "left" })
 function sendMail() {
     var params = {
         email: document.getElementById("email").value,
+        message: document.getElementById("message").value
     };
 
     const serviceID = "service_qk25k2e";
@@ -133,8 +134,13 @@ function sendMail() {
     emailjs.send(serviceID, templateID, params)
         .then(res => {
             document.getElementById("email").value = "";
+            document.getElementById("message").value = "";
             console.log(res);
-            alert("your message has sent sucessfully")
+            Swal.fire({
+                title: "Good job!",
+                text: "Your details has been successfully submitted.",
+                icon: "success"
+            });
         })
         .catch((error) => console.log(error));
 }

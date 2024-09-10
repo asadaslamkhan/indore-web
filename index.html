@@ -529,14 +529,16 @@
         <!-- newsletter -->
         <div class="container text-white absolute top-0 left-0 right-0 -translate-y-1/2">
             <div class="bg-green-900 px-10 pt-5 pb-10 space-y-5 rounded-md">
-                <h3><span class="text-yellow-500">Send</span> a Message</h3>
+                <h3><span class="text-yellow-500">Get</span> in touch</h3>
 
                 <div class="flex flex-col md:flex-row gap-1">
-                    <input type="email" id="email" placeholder="Your Email and , 'Message' "
+                    <input type="email" id="email" placeholder="Your Email"
+                        class="w-auto md:w-auto px-5 py-3 text-green-900 rounded-md outline-none">
+                        <input type="message" id="message" placeholder="Message"
                         class="w-full px-5 py-3 text-green-900 rounded-md outline-none">
                     <button onclick="sendMail()"
-                        class="flex items-center justify-center gap-1 bg-green-950 px-5 py-3 rounded-md hover:opacity-80 duration-300">
-                        <span>Send</span>
+                        class="lg:h-auto lg:w-auto xl:w-auto xl:h-auto md:w-auto md:h-auto flex items-center justify-center gap-1 bg-green-950 px-5 py-3 rounded-md hover:opacity-80 duration-300">
+                        <span>Submit</span> 
                         <i class="ri-send-plane-2-fill"></i>
                     </button>
                 </div>
@@ -617,7 +619,7 @@
         </div>
         <!-- floral image -->
         <div class="footer__floral absolute bottom-0 left-0 opacity-20 pointer-events-none">
-            <img src="./assets/assets/img/floral-1.png" alt="floral_image" class="w-full lg:w-1/2">
+            <img src="./assets/img/floral-1.png" alt="floral_image" class="w-full lg:w-1/2">
         </div>
     </footer>
 
@@ -636,6 +638,10 @@
 
     <!-- scroll reveal -->
      <script src="./assets/js/scrollreveal.min.js"></script>
+
+    <!-- alert box  -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <!-- main.js -->
     <script src="main.js"></script>
 </body>
